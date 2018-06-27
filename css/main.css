@@ -1,0 +1,107 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+.lt{
+	float: left;
+}
+.rt{
+	float: right;
+}
+.fs20{
+	font-size: 0.2rem;
+}
+.fs24{
+	font-size: 0.24rem;
+}
+.fs28{
+	font-size: 0.28rem;
+}
+
+body{background-color: #FFFFFF}
+
+.confirm{
+	width: 6.4rem;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	background: rgba(0,0,0,0.3);
+	color: #999;
+	z-index: 9999;
+	display: none;
+}
+.confirm>div{
+	width: 6rem;
+	background: #FFF;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%);
+	transform: translateX(-50%);
+	border-radius: 0.12rem;
+	padding: 0.6rem 0.2rem;
+	box-sizing: border-box;transition: all 0.4s;
+	opacity: 0;
+}
+.confirm>div>div{
+	overflow: hidden;
+}
+.confirm>div>div:first-child{
+	border-bottom: 1px solid #EEE;
+	padding: 0.2rem 0px;
+}
+.confirm>div>div>p{
+	width: 50%;
+	line-height: 0.6rem;
+	text-align: center;
+	box-sizing: border-box;
+}
+.confirm>div>div>p:first-child{
+	border-right: 1px solid #eee;
+}
+
+.confirm.active{
+	background:rgba(0,0,0,0.3);
+}
+.confirm.active>div{
+	width: 5rem;
+	opacity: 1;
+	padding: 0.1rem 0.2rem;
+}
+
+.hint{
+	display: block;
+	position: fixed;
+	top: 0.3rem;
+	right: 0.2rem;
+	z-index: 100;
+}
+.hint>div{
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	box-shadow: 0px 0px 0.1rem 0px rgba(0,0,0,0.3);
+	margin-top: 0.2rem;
+	border-radius: 0.1rem;
+	padding:0.1rem 0.2rem;
+	clear: both;
+}
+.hint>div>img{
+	width: 0.4rem;
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	left: 0.1rem;
+}
+.hint>div>p{
+	margin-left: 0.5rem;
+	max-width: 4.4rem;
+	line-height: 0.24rem;
+	padding: 0.1rem 0px;
+	color: #999;
+}
