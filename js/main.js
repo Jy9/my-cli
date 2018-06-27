@@ -21,6 +21,18 @@ $(function(){
 		
 	$("body").append(confirm + hint);
 })
+
+//手机号
+var ISPHONE = /^1(3|4|5|7|8)\d{9}$/;
+//身份证
+var ISIDCARD = /^(\d{15}$)|(^\d{17}([0-9]|x|X)$)/;
+//验证码
+var ISCODE = /^[0-9]{6}$/;
+//姓名
+var ISNAME = /^[\u4E00-\u9FA5\uf900-\ufa2d]{2,10}$/;
+//密码
+var ISPW = /^[0-9a-zA-Z]{3,12}$/;
+
 //confirm
 $.confirm = function(msg,success,error){
 	var confirm = $("#confirm");
@@ -105,6 +117,29 @@ $.local = function(key, str) {
 			}
 		}
 	}
+};
+//链接参数
+$.href = function(url) {
+	var obj = {};
+	var a = url.split("?")[1];
+	if(a) {
+		var b = a.split("&");
+		for(var i = 0, len = b.length; i < len; i++) {
+			var p = b[i].split("=");
+			obj[p[0]] = p[1];
+		}
+	}
+	return obj
+};
+//数组去重
+$.removerepet = function(ar) {
+	var ret = [];
+	for(var i = 0, j = ar.length; i < j; i++) {
+		if(ret.indexOf(ar[i]) === -1) {
+			ret.push(ar[i]);
+		}
+	}
+	return ret;
 };
 //展示获取图片
 $.imgshow = function(input, fn) {
